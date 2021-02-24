@@ -1,0 +1,39 @@
+body {
+    text-align: center;
+    line-height: 1.6;
+    font-size: 1.6rem;
+  }
+  
+  #main {
+    background-color: #eee;
+  }
+  
+  #img-div {
+    background-color: white;
+  }
+  
+  img {
+    max-width: 100%;
+    display: block;
+    height: auto;
+    margin: 0 auto;
+  }
+  
+  #img-caption {
+    margin: 15px 0 5px 0;
+  }
+  
+  ul {
+    margin: 0 auto 15px auto;
+    max-width: 550px;
+    text-align: left;
+  }
+  
+  blockquote {
+    margin: 0 auto 30px auto;
+    max-width: 550px;
+    text-align: left;
+    font-style: italic;
+  }
+  
+  

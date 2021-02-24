@@ -1,0 +1,165 @@
+body {
+  background-color: #eee;
+  font-size: 1.2rem;
+}
+
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 20px;
+  min-height: 75px;
+  padding: 0 20px;
+}
+
+#header-img {
+  max-width: 300px;
+  margin-left: 20px;
+}
+
+nav {
+  font-weight: 400;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  width: 35vw;
+  justify-content: space-around;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+#subscribe {
+  display: flex;
+  margin-top: 50px;;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  height: 200px;
+}
+
+#email, #submit {
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+.container {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+#features {
+  margin-top: 30px;
+}
+
+.grid {
+  display: flex;
+}
+
+.icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 125px;
+  width: 20vw;
+  color: darkorange;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 125px;
+  width: 80vw;
+  padding: 5px;
+}
+
+#how-it-works {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+#pricing {
+  margin-top: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  text-align: center;
+  border: 1px solid black;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+.level {
+  width: 100%;
+  font-weight: 700;
+  padding: 15px 0;
+  background-color: #ddd;
+  text-transform: uppercase;
+}
+
+.product li {
+  padding: 5px 0;
+}
+
+.product button {
+  border: 0;
+  margin: 15px 0;
+  background-color: #f1c40f;
+  font-weight: 400;
+  padding: 10px 20px;
+  font-size: 1em;
+}
+
+footer {
+  margin-top: 30px;
+  background-color: #ddd;
+  padding: 20px;
+}
+
+footer ul {
+  display: flex;
+  justify-content: flex-end;
+}
+
+footer li {
+  padding: 0 10px;
+}
+
+footer span {
+  display: flex;
+  justify-content: flex-end;
+}
+
+@media (max-width: 600px) {
+  #pricing {
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+}

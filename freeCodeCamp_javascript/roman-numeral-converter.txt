@@ -1,0 +1,21 @@
+function convertToRoman(num) {
+    let temp = num;
+    let arr = [];
+    let romanStr = [];
+    let decimalArr = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1];
+    let romanArr = ["M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"];
+    while(temp >= 0) {
+               let index = decimalArr.findIndex(elem => elem <= temp);
+               if(index !== -1) {
+                   arr.push(index);    
+               } 
+               
+               temp = temp - decimalArr[index];                        
+           }
+           for(let i = 0; i < arr.length; i++) {
+            romanStr.push(romanArr[arr[i]]);
+        }
+        return romanStr.join('');
+}
+
+convertToRoman(36);

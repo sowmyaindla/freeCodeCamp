@@ -1,0 +1,20 @@
+function rot13(str) {
+    let inputArr = str.split('');
+    let cipherArr = [];
+    console.log(inputArr);
+    for(let i = 0; i < inputArr.length; i++) {
+        let charCode = inputArr[i].charCodeAt();
+        if(charCode > 64 && charCode < 78) {
+            cipherArr.push(String.fromCharCode(charCode + 13));
+        } else if(charCode > 77 && charCode < 91) {
+            cipherArr.push(String.fromCharCode(charCode - 26 + 13));
+        } else {
+            cipherArr.push(inputArr[i]);
+        }
+    }
+
+  return cipherArr.join('');
+}
+
+
+rot13("SERR PBQR PNZC");

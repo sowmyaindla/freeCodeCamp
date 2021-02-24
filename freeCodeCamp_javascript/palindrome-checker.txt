@@ -1,0 +1,9 @@
+function palindrome(str) {
+
+    let newArr = str.replace(/[^0-9a-z]/gi, '').split('');
+
+    return ((newArr.join('').toLowerCase()).localeCompare(newArr.reverse().join('').toLowerCase()) === 0) ? true : false;
+}
+
+
+palindrome("eye");

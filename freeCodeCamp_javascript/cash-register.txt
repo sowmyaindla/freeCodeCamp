@@ -1,0 +1,51 @@
+function checkCashRegister(price, cash, cid) {
+
+  let newArr = [...cid].reverse();
+  let amountArr = [100, 20, 10, 5, 1, 0.25, 0.1, 0.05, 0.01];
+  let change = Math.round((cash - price) * 100) / 100;
+  let objArr = [];
+  let arr = [];
+
+  arr = newArr.filter(elem => elem[1] === change);
+  if(arr.length !== 0) {
+    return {status: "CLOSED", change: cid};
+  }
+
+  let sum = newArr.reduce((acc, currentValue) => (acc + currentValue[1]), 0.00);
+  sum = Math.round(sum * 100) / 100;
+  
+  if(sum > change) {
+    for(let i = 0; i < newArr.length; i++) {
+      if(change > newArr[i][1]) {
+        if(newArr[i][1] !== 0) {
+          objArr.push(newArr[i]);
+        change = Math.round((change - newArr[i][1]) * 100) / 100;
+        }
+        
+      } else {
+        let count = 1;
+        while(change >= amountArr[i]) {
+          change = Math.round((change - amountArr[i]) * 100) / 100;
+          newArr[i][1] = count * amountArr[i];
+          count++;
+        }
+        if(count > 1) {
+          objArr.push(newArr[i]);
+        }
+      }
+    } 
+
+    let total = objArr.reduce((acc, currentValue) => (acc + currentValue[1]), 0.00);
+    total = Math.round(total * 100) / 100;
+    
+    if(total < Math.round((cash - price) * 100) / 100) {
+      return {status: "INSUFFICIENT_FUNDS", change: []};
+    } else {
+      return {status: "OPEN", change: objArr};
+    }    
+  } else {
+    return {status: "INSUFFICIENT_FUNDS", change: []};
+  }
+}
+
+checkCashRegister(19.5, 20, [["PENNY", 1.01], ["NICKEL", 2.05], ["DIME", 3.1], ["QUARTER", 4.25], ["ONE", 90], ["FIVE", 55], ["TEN", 20], ["TWENTY", 60], ["ONE HUNDRED", 100]]);

@@ -1,0 +1,39 @@
+body {
+  text-align: center;
+  background-image: url("https://i.pinimg.com/originals/aa/6f/f0/aa6ff09ba9e4adf2a8b911605ab2f3c4.jpg");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  line-height: 1.6;
+  font-size: 1.6rem;
+}
+
+section {
+  max-width: 40%;
+  margin: 50px auto;
+  text-align: left;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 50px;
+  border-radius: 5px;
+}
+
+#name, #email, #number, #dropdown, #feature, #comments, #submit {
+  width: 100%;
+  padding: 8px;
+}
+
+#submit {
+  background-color: green;
+  border-radius: 5px;
+  color: white;
+  font-size: 1.4rem;
+}
+
+input[type:radio] {
+  border: 0;
+  width: 100%;
+  height: 2em;
+}
